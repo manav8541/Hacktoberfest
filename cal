@@ -1,0 +1,36 @@
+class Calculator:
+    def __init__(self, value=0):
+        self.value = value
+
+    def add(self, x):
+        self.value += x
+
+    def subtract(self, x):
+        self.value -= x
+
+    def multiply(self, x):
+        self.value *= x
+
+    def divide(self, x):
+        if x != 0:
+            self.value /= x
+        else:
+            print("Error: Division by zero")
+
+# Example usage:
+calc = Calculator(10)
+print("Initial value:", calc.value)
+
+calc.add(5)
+print("After adding 5:", calc.value)
+
+calc.subtract(2)
+print("After subtracting 2:", calc.value)
+
+calc.multiply(3)
+print("After multiplying by 3:", calc.value)
+
+calc.divide(4)
+print("After dividing by 4:", calc.value)
+
+calc.divide(0)  # Attempt to divide by zero
